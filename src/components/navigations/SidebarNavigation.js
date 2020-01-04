@@ -7,7 +7,7 @@ import Icon from 'react-fontawesome';
 const SidebarNavigation = (props) => (
 	<div id="SidebarNavigation">
 		<div class="logo-container">
-			<img src={logo} alt="twitter logo" width="28" height="28" />
+			<img src={logo} alt="twitter logo" width="32" height="32" />
 		</div>
 		
 		<Nav defaultActiveKey={props.location.pathname} id="main-menu" className="flex-column">
