@@ -1,0 +1,8 @@
+$primary-background     : #212121;
+$secondary-background   : #343a40;
+
+@use 'stylesheets/SidebarNavigation';
+
+body {
+  background-color: $primary-background !important;
+}
