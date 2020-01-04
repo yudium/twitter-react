@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import AnyRoute from "./components/routes/AnyRoute";
 import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from './components/routes/GuestRoute';
