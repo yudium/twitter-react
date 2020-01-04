@@ -5,13 +5,26 @@ body {
   background-color: $primary-background !important;
 }
 
-#logo-container {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: transparent;
-  padding: 9px;
+#SidebarNavigation {
+	.logo-container {
+		display: inline-block;
+		border-radius: 50%;
+		background-color: transparent;
+		padding: 9px;
+		&:hover {
+			background-color: $secondary-background;
+		}
+	}
+	#main-menu {
+		font-size: 18px;
+		font-weight: bold;
+		.nav-link {
+			margin-top: 10px;
+		}
+	}
+	button {
+		margin-top: 10px;
+		border-radius: 30px;
+	}
 }
 
-#logo-container:hover {
-  background-color: $secondary-background;
-}
