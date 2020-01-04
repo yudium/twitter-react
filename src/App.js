@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AnyRoute from "./components/routes/AnyRoute";
+import UserRoute from "./components/routes/UserRoute";
+import GuestRoute from './components/routes/GuestRoute';
+import Default from './components/layouts/Default';
+import HomePage from './components/pages/HomePage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <React.Fragment>
+        <AnyRoute path="/" exact layout={Default} component={HomePage} />
+    </React.Fragment>
+);
 
 export default App;
