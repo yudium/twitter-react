@@ -1,0 +1,26 @@
+#SidebarNavigation {
+	.logo-container {
+		display: inline-block;
+		border-radius: 50%;
+		background-color: transparent;
+		padding: 9px;
+		&:hover {
+			background-color: $secondary-background;
+		}
+	}
+	#main-menu {
+		font-size: 19px;
+		font-weight: bold;
+		.nav-link {
+			margin-top: 10px;
+			.fa {
+				font-size: 30px;
+				margin-right: 15px;
+			}
+		}
+	}
+	button {
+		margin-top: 10px;
+		border-radius: 30px;
+	}
+}

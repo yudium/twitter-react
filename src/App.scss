@@ -1,30 +1,8 @@
 $primary-background     : #212121;
 $secondary-background   : #343a40;
 
+@import 'stylesheets/SidebarNavigation';
+
 body {
   background-color: $primary-background !important;
 }
-
-#SidebarNavigation {
-	.logo-container {
-		display: inline-block;
-		border-radius: 50%;
-		background-color: transparent;
-		padding: 9px;
-		&:hover {
-			background-color: $secondary-background;
-		}
-	}
-	#main-menu {
-		font-size: 18px;
-		font-weight: bold;
-		.nav-link {
-			margin-top: 10px;
-		}
-	}
-	button {
-		margin-top: 10px;
-		border-radius: 30px;
-	}
-}
-
