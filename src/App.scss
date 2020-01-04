@@ -1,8 +1,17 @@
 $primary-background     : #212121;
 $secondary-background   : #343a40;
 
-@use 'stylesheets/SidebarNavigation';
-
 body {
   background-color: $primary-background !important;
+}
+
+#logo-container {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 9px;
+}
+
+#logo-container:hover {
+  background-color: $secondary-background;
 }

@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Nav, Button } from 'react-bootstrap';
 import logo from '../../logo.png';
-import './SidebarNavigation.css';
 
 const SidebarNavigation = (props) => (
 	<React.Fragment>
-		<div id="SidebarNavigation__logo-container">
+		<div id="logo-container">
 			<img id="logo" src={logo} alt="twitter logo" width="28" height="28" />
 		</div>
 		
