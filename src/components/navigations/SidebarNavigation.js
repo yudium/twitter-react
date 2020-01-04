@@ -11,12 +11,12 @@ const SidebarNavigation = (props) => (
 		</div>
 		
 		<Nav defaultActiveKey={props.location.pathname} id="main-menu" className="flex-column">
-			<Nav.Link href="/home"><Icon name="home" /> Home</Nav.Link>
-			<Nav.Link href="/home"><Icon name="hashtag" /> Explore</Nav.Link>
-			<Nav.Link href="/home"><Icon name="bell-o" /> Notifications</Nav.Link>
-			<Nav.Link href="/home"><Icon name="envelope-o" /> Messages</Nav.Link>
-			<Nav.Link href="/home"><Icon name="bookmark-o" /> Bookmarks</Nav.Link>
-			<Nav.Link href="/home"><Icon name="rocket" /> Profile</Nav.Link>
+			<Nav.Link href="/home"><Icon name="home" 		fixedWidth /> Home</Nav.Link>
+			<Nav.Link href="/home"><Icon name="hashtag" 	fixedWidth /> Explore</Nav.Link>
+			<Nav.Link href="/home"><Icon name="bell-o" 		fixedWidth /> Notifications</Nav.Link>
+			<Nav.Link href="/home"><Icon name="envelope-o" 	fixedWidth /> Messages</Nav.Link>
+			<Nav.Link href="/home"><Icon name="bookmark-o" 	fixedWidth /> Bookmarks</Nav.Link>
+			<Nav.Link href="/home"><Icon name="rocket" 		fixedWidth /> Profile</Nav.Link>
 		</Nav>
 
 		<Button type="button" block>Tweet</Button>
