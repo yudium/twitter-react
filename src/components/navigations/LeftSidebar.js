@@ -4,8 +4,8 @@ import { Nav, Button } from 'react-bootstrap';
 import logo from '../../logo.png';
 import Icon from 'react-fontawesome';
 
-const SidebarNavigation = (props) => (
-	<div id="SidebarNavigation">
+const LeftSidebar = (props) => (
+	<div id="LeftSidebar">
 		<div class="logo-container">
 			<img src={logo} alt="twitter logo" width="32" height="32" />
 		</div>
@@ -23,10 +23,10 @@ const SidebarNavigation = (props) => (
 	</div>
 );
 
-SidebarNavigation.propTypes = {
+LeftSidebar.propTypes = {
 	location: PropTypes.shape({
 		pathname: PropTypes.string.isRequired
 	}).isRequired
 }
 
-export default SidebarNavigation;
+export default LeftSidebar;

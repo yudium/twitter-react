@@ -1,7 +1,7 @@
 $primary-background     : #212121;
 $secondary-background   : #343a40;
 
-@import 'stylesheets/SidebarNavigation';
+@import 'stylesheets/LeftSidebar';
 
 body {
   background-color: $primary-background !important;

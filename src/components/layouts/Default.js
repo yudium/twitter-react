@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
-import SidebarNavigation from '../navigations/SidebarNavigation';
+import LeftSidebar from '../navigations/LeftSidebar';
 
 const Default = (props) => (
 	<Container>
 		<Row>
 			<Col md={3}>
-				<SidebarNavigation location={props.location} />
+				<LeftSidebar location={props.location} />
 			</Col>
 			<Col md={6}>
 				{props.children}
