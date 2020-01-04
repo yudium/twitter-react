@@ -10,10 +10,11 @@
 		}
 	}
 	#main-menu {
-		font-size: 19px;
+		font-size: $sidebar-font-size;
 		font-weight: bold;
-		.nav-link {
+		a.nav-link {
 			margin-top: 10px;
+			color: $sidebar-font-color;
 			.fa {
 				font-size: 30px;
 				margin-right: 15px;
@@ -21,7 +22,11 @@
 		}
 	}
 	button {
-		margin-top: 10px;
+		margin-left: 10px;
+		width: 80%;
+		margin-top: 15px;
 		border-radius: 30px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }

@@ -10,10 +10,10 @@ const Default = (props) => (
 			<Col md={3}>
 				<LeftSidebar location={props.location} />
 			</Col>
-			<Col md={6}>
+			<Col md={5}>
 				{props.children}
 			</Col>
-			<Col md={3}>
+			<Col md={4}>
 				<RightSidebar location={props.location} />
 			</Col>
 		</Row>

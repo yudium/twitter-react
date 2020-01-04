@@ -1,7 +1,15 @@
 $primary-background     : #212121;
 $secondary-background   : #343a40;
-$secondary-color		: #868e96;
 $bootstrap-background	: #007bff;
+
+$border-color			: #555555;
+
+$sidebar-font-color		: white;
+$secondary-font-color	: #868e96;
+
+$sidebar-big-font-size		: 19px;
+$sidebar-font-size			: 15px;
+$sidebar-small-font-size	: 12px;
 
 @import 'stylesheets/LeftSidebar';
 @import 'stylesheets/RightSidebar';

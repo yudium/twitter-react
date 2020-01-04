@@ -1,22 +1,69 @@
 #RightSidebar {
-	form {
-		background-color: $secondary-background;
-		border-radius: 30px;
-		border: 1px solid $secondary-background;
-		&:hover {
-			border-color: $bootstrap-background;
-		}
-		.input-group-prepend span {
-			background-color: transparent;
-			border-color: transparent;
-			color: $secondary-color;
-		}
-		input {
-			background-color: transparent;
-			border-color: transparent;
-			color: $secondary-color;
-			box-shadow: none;
+	#SearchBar {
+		form {
+			background-color: $secondary-background;
+			border-radius: 30px;
+			border: 1px solid $secondary-background;
+			&:hover {
+				border-color: $bootstrap-background;
+			}
+			.input-group-prepend span {
+				background-color: transparent;
+				border-color: transparent;
+				color: $secondary-font-color;
+			}
+			input {
+				background-color: transparent;
+				border-color: transparent;
+				color: $secondary-font-color;
+				box-shadow: none;
+			}
+		}		
+	}
+	#TrendBar {
+		.card {
+			background-color: $secondary-background;
+			color: $secondary-font-color;
+			margin-top: 20px;
+			font-size: $sidebar-font-size;
+			.card-header {
+				font-weight: bold;
+				font-size: $sidebar-big-font-size;
+				color: $sidebar-font-color;
+				Button {
+					border-radius: 50%;
+					font-size: 23px;
+					padding: 0px 7px;
+					border: none;
+					background: none;
+					&:hover {
+						background-color: $primary-background;
+					}
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+			.list-group > .list-group-item {
+				background-color: $secondary-background;
+				border-top: 1px solid $border-color;
+				span {
+					font-size: $sidebar-small-font-size;
+				}
+				h5 {
+					font-size: $sidebar-font-size;
+					color: $sidebar-font-color;
+					font-weight: bold;
+					margin-top: 5px;
+					margin-bottom: 3px;
+				}
+				p {
+					margin-bottom: 0;
+				}
+			}
+			.card-footer {
+				border-top: 1px solid $border-color;
+			}
 		}
 	}
-
 }
