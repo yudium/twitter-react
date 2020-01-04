@@ -1,0 +1,22 @@
+#RightSidebar {
+	form {
+		background-color: $secondary-background;
+		border-radius: 30px;
+		border: 1px solid $secondary-background;
+		&:hover {
+			border-color: $bootstrap-background;
+		}
+		.input-group-prepend span {
+			background-color: transparent;
+			border-color: transparent;
+			color: $secondary-color;
+		}
+		input {
+			background-color: transparent;
+			border-color: transparent;
+			color: $secondary-color;
+			box-shadow: none;
+		}
+	}
+
+}

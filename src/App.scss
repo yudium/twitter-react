@@ -1,7 +1,10 @@
 $primary-background     : #212121;
 $secondary-background   : #343a40;
+$secondary-color		: #868e96;
+$bootstrap-background	: #007bff;
 
 @import 'stylesheets/LeftSidebar';
+@import 'stylesheets/RightSidebar';
 
 body {
   background-color: $primary-background !important;

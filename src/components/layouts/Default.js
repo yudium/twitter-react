@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import LeftSidebar from '../navigations/LeftSidebar';
+import RightSidebar from '../navigations/RightSidebar';
 
 const Default = (props) => (
 	<Container>
@@ -12,7 +13,9 @@ const Default = (props) => (
 			<Col md={6}>
 				{props.children}
 			</Col>
-			<Col md={3}></Col>
+			<Col md={3}>
+				<RightSidebar location={props.location} />
+			</Col>
 		</Row>
 	</Container>
 );
