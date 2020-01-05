@@ -13,8 +13,14 @@
 		font-size: $sidebar-font-size;
 		font-weight: bold;
 		a.nav-link {
+			padding: .5rem 2rem .5rem 0.9rem;
 			margin-top: 10px;
 			color: $sidebar-font-color;
+			border-radius: 50px;
+			background-color: transparent;
+			&:hover {
+				background-color: darken($bootstrap-background, 10%);
+			}
 			.fa {
 				font-size: 30px;
 				margin-right: 15px;
@@ -22,7 +28,7 @@
 		}
 	}
 	button {
-		margin-left: 10px;
+		margin-left: 2px;
 		width: 80%;
 		margin-top: 15px;
 		border-radius: 30px;
