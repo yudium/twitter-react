@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Nav, Button } from 'react-bootstrap';
-import logo from '../../logo.png';
+import logo from '../../../logo.png';
 import Icon from 'react-fontawesome';
+import './LeftSidebar.scss';
 
 const LeftSidebar = (props) => (
 	<div id="LeftSidebar">

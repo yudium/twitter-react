@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SearchBar from './RightSidebar/SearchBar';
-import TrendBar from './RightSidebar/TrendBar';
+import SearchBar from './RightSidebar.SearchBar';
+import TrendBar from './RightSidebar.TrendBar';
+import './RightSidebar.scss';
 
 const RightSidebar = (props) => (
   <div id="RightSidebar">

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
-import LeftSidebar from '../navigations/LeftSidebar';
-import RightSidebar from '../navigations/RightSidebar';
+import LeftSidebar from './LeftSidebar';
+import RightSidebar from './RightSidebar';
+import './Default.scss';
 
 const Default = (props) => (
 	<Container>

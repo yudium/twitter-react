@@ -10,10 +10,3 @@ $secondary-font-color	: #868e96;
 $sidebar-big-font-size		: 19px;
 $sidebar-font-size			: 15px;
 $sidebar-small-font-size	: 12px;
-
-@import 'stylesheets/LeftSidebar';
-@import 'stylesheets/RightSidebar';
-
-body {
-  background-color: $primary-background !important;
-}
