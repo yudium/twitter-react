@@ -7,7 +7,7 @@ import './LeftSidebar.scss';
 
 const LeftSidebar = (props) => (
 	<div id="LeftSidebar">
-		<div class="logo-container">
+		<div className="logo-container">
 			<img src={logo} alt="twitter logo" width="32" height="32" />
 		</div>
 		

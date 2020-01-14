@@ -23,9 +23,7 @@ const SearchBar = (props) => (
 );
 
 SearchBar.propTypes = {
-	location: PropTypes.shape({
-		pathname: PropTypes.string.isRequired
-	}).isRequired
+
 }
 
 export default SearchBar;
