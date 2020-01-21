@@ -1,9 +1,9 @@
 @import '../../../Variables';
 
-#LeftSidebar {
+.container {
 	margin-top: 10px;
 	margin-left: 20px;
-	.logo-container {
+	.logo {
 		display: inline-block;
 		border-radius: 50%;
 		background-color: transparent;
@@ -13,10 +13,11 @@
 			background-color: $secondary-background;
 		}
 	}
-	#main-menu {
+	.menu {
 		font-size: $sidebar-font-size;
 		font-weight: bold;
-		a.nav-link {
+		// a.nav-link {
+		a {
 			padding: .5rem 2rem .5rem 0.9rem;
 			margin-top: 10px;
 			color: $sidebar-font-color;
@@ -25,7 +26,8 @@
 			&:hover {
 				background-color: darken($bootstrap-background, 20%);
 			}
-			.fa {
+			// .fa {
+			span {
 				font-size: 30px;
 				margin-right: 15px;
 			}

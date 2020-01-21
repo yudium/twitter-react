@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import AnyRoute from "./components/routes/AnyRoute";
 import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from './components/routes/GuestRoute';
-import Default from './components/layouts/default/Default';
+import Default from './components/layouts/Default/Default';
 import HomePage from './components/pages/HomePage/HomePage';
 
 const App = () => (

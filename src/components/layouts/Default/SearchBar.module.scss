@@ -1,0 +1,25 @@
+@import '../../../Variables';
+
+.container {
+	form {
+		background-color: $secondary-background;
+		border-radius: 30px;
+		border: 1px solid $secondary-background;
+		&:hover {
+			border-color: $bootstrap-background;
+		}
+		.input-group-prepend {
+			background-color: transparent;
+			border-color: transparent;
+			color: $secondary-font-color;
+		}
+		input {
+			background-color: transparent !important;
+			border-color: transparent !important;
+			color: $secondary-font-color !important;
+			box-shadow: none !important;
+			outline: none !important;
+			caret-color: white;
+		}
+	}		
+}

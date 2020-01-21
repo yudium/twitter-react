@@ -1,0 +1,21 @@
+@import '../../../../Variables';
+
+.container {
+	width: 230px;
+	font-size: 14px;
+	border: $border;
+	border-radius: 4px;
+	background-color: $primary-background;
+	box-shadow: 0 0 6px aliceblue;
+	position: absolute;
+	left: -5px;
+	z-index: 999;
+	.item {
+		margin: 0;
+		padding: 5px 0;
+		background-color: $primary-background;
+		& > div { // .container
+			margin: 5px 0;
+		}
+	}
+}

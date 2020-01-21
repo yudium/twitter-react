@@ -1,0 +1,11 @@
+@import '../../../../Variables';
+
+.container {
+	border-bottom: $border;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	button {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

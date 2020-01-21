@@ -1,16 +1,13 @@
 import React from 'react';
-import Icon from 'react-fontawesome';
-import './HomePage.scss';
-import StatusBar from './StatusBar';
+import './HomePage.module.scss';
+import Header from './Header';
+import StatusBar from './StatusBar/StatusBar';
 
 const HomePage = (props) => (
-    <div id="HomePage">
-    	<div className="header d-flex">
-    		<h1>Home</h1>
-    		<div className="ml-auto"><Icon name="star-half-full" /></div>
-    	</div>
+    <div styleName="container">
+    	<Header />
 
-    	<StatusBar />
+    	<StatusBar maxCharSize={120} />
     </div>
 );
 

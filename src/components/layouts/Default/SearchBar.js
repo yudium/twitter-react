@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, InputGroup } from 'react-bootstrap';
 import Icon from 'react-fontawesome';
+import  './SearchBar.module.scss';
 
 const SearchBar = (props) => (
-	<div id="SearchBar">
+	<div styleName="container">
 	    <Form inline>
           <InputGroup>
             <InputGroup.Prepend>
-              <InputGroup.Text id="inputGroupPrepend"><Icon name="search" /></InputGroup.Text>
+              <InputGroup.Text styleName="input-group-prepend"><Icon name="search" /></InputGroup.Text>
             </InputGroup.Prepend>
             <Form.Control
               type="text"
@@ -23,7 +24,6 @@ const SearchBar = (props) => (
 );
 
 SearchBar.propTypes = {
-
 }
 
 export default SearchBar;

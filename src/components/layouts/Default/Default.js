@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
-import './Default.scss';
+import './Default.module.scss';
 
 const Default = (props) => (
 	<Container>

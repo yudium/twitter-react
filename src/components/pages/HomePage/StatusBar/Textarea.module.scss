@@ -1,0 +1,49 @@
+@import '../../../../Variables';
+
+.container {
+	position: relative;
+
+	%shared {
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		min-height: 54px;
+		border: none;
+		line-height: 25px;
+		overflow-wrap: break-word;
+		overflow-wrap: break-word;
+   		white-space: pre-wrap;
+   		outline: none; // for chrome
+   		padding: 0; // for chrome
+	}
+	.display {
+		@extend %shared;
+		position: relative;
+		z-index: 1;
+		background-color: $primary-background;
+		color: $main-font-color;
+		padding-bottom: 25px;
+		i {
+			color: $bootstrap-background;
+			font-style: normal; // no italic
+		}
+		span {
+			background: rgb(224, 36, 94);
+		}
+	}
+	textarea {
+		@extend %shared;
+		position: absolute;
+		z-index: 2;
+		height: 100%;
+		background-color: transparent;
+		color: transparent;
+		caret-color: white;
+		overflow: hidden; // turn off scrollbar
+		resize: none;
+		&::selection {
+  			// background: inherit;
+		}
+	}
+}
+

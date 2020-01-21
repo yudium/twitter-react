@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { Nav, Button } from 'react-bootstrap';
 import logo from '../../../logo.png';
 import Icon from 'react-fontawesome';
-import './LeftSidebar.scss';
+import './LeftSidebar.module.scss';
 
 const LeftSidebar = (props) => (
-	<div id="LeftSidebar">
-		<div className="logo-container">
+	<div styleName="container">
+		<div styleName="logo">
 			<img src={logo} alt="twitter logo" width="32" height="32" />
 		</div>
 		
-		<Nav defaultActiveKey={props.location.pathname} id="main-menu">
+		<Nav defaultActiveKey={props.location.pathname} styleName="menu">
 			<Nav.Link href="/home"><Icon name="home" 		fixedWidth /> Home</Nav.Link>
 			<Nav.Link href="/home"><Icon name="hashtag" 	fixedWidth /> Explore</Nav.Link>
 			<Nav.Link href="/home"><Icon name="bell-o" 		fixedWidth /> Notifications</Nav.Link>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Icon from 'react-fontawesome';
-import './Header.scss';
+import './Header.module.scss';
 
 const Header = (props) => (
-	<div id="HomePage--Header" class="d-flex">
+	<div styleName="container">
 		<h1>Home</h1>
-		<div class="ml-auto">
+		<div className="ml-auto">
 			<Icon name="star-half-full" />
 		</div>
 	</div>

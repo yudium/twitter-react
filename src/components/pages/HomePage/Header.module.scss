@@ -1,0 +1,14 @@
+@import '../../../Variables';
+
+.container {
+	display: flex;
+	padding: 10px 20px 6px 20px;
+	border-bottom: $border;
+	h1 {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	span { // font-awesome icon
+		font-size: 20px;
+	}
+}
