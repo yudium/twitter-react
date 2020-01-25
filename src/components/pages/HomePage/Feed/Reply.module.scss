@@ -1,0 +1,17 @@
+.icon-container {
+	display: inline-block;
+	padding: 4px 7px;
+	border-radius: 100%;
+	span { // .fa
+		vertical-align: middle;
+	}
+	&:hover {
+		color: #339af0;
+		background: transparentize(#339af0, 0.8);
+	}
+}
+
+.number {
+	font-size: 14px;
+	margin-left: 3px;
+}

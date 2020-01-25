@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ListGroup, Container, Row, Col } from 'react-bootstrap';
-import PhotoProfile from '../../../shared/PhotoProfile';
+import PhotoProfile from '../PhotoProfile';
 import './MentionDropdown.module.scss';
 
 const MENTION_LIST=['@yudi099', '@iqbal.ruhadian', '@hendi_ginanjar', '@dekur12'];

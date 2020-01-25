@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { ProgressBar } from 'react-bootstrap';
 import './LetterCounter.module.scss';
 
-const LetterCounter = ({ maxCharSize, tweet }) => {
+const LetterCounter = ({ tweet }) => {
+	const maxCharSize = process.env.REACT_APP_TWEET_MAXCHARSIZE;
+
 	const tweetLength = tweet.length;
 	const percent = tweetLength / maxCharSize * 100;
 
@@ -27,7 +29,6 @@ const LetterCounter = ({ maxCharSize, tweet }) => {
 
 LetterCounter.propTypes = {
 	tweet: PropTypes.string.isRequired,
-	maxCharSize: PropTypes.number.isRequired
 }
 
 export default LetterCounter;

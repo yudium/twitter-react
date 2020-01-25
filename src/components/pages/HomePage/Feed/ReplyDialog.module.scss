@@ -1,0 +1,50 @@
+@import '../../../../Variables';
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	max-width: none;
+	height: 100vh;
+	background: transparentize($secondary-background, 0.3);
+	z-index: 9999;
+}
+
+.dialog {
+	width: 500px;
+	min-height: 60vh;
+	margin: 40px auto 0 auto;
+	background-color: $primary-background;
+	color: $secondary-font-color;
+	border-radius: 13px;
+	font-size: 14px;
+	.header {
+		border-bottom: $border;
+		button {
+			background: none;
+			border: none;
+			font-size: 20px;
+			border-radius: 50%;
+			padding: 5px 12px;
+			outline: none;
+			box-shadow: none;
+			&:hover {
+				background: transparentize(#228be6, 0.7);
+			}
+		}
+	}
+	.tweet {
+		margin-top: 5px;
+	}
+}
+
+.line {
+	background-color: rgb(47, 51, 54);
+	width: 2px;
+	height: 100%;
+	margin-left: calc(52px / 2); // 52 is photo size
+}
+
+.photo {
+}

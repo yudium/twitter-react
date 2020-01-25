@@ -1,8 +1,7 @@
-@import '../../../../Variables';
+@import '../../../Variables';
 
 .container {
 	position: relative;
-
 	%shared {
 		display: block;
 		width: 100%;
@@ -20,16 +19,8 @@
 		@extend %shared;
 		position: relative;
 		z-index: 1;
-		background-color: $primary-background;
-		color: $main-font-color;
 		padding-bottom: 25px;
-		i {
-			color: $bootstrap-background;
-			font-style: normal; // no italic
-		}
-		span {
-			background: rgb(224, 36, 94);
-		}
+		background-color: $primary-background;
 	}
 	textarea {
 		@extend %shared;
@@ -41,9 +32,5 @@
 		caret-color: white;
 		overflow: hidden; // turn off scrollbar
 		resize: none;
-		&::selection {
-  			// background: inherit;
-		}
 	}
 }
-

@@ -1,50 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Textarea.module.scss';
-import escape from 'escape-html';
+import './TweetEditor.module.scss';
+import TweetRenderer from '../TweetRenderer';
 import MentionDropdown from './MentionDropdown';
 
-class Textarea extends React.Component {
+class TweetEditor extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.openMentionDropdown = this.openMentionDropdown.bind(this);
 		this.handleSelectedMention = this.handleSelectedMention.bind(this);
-		this.placeholder = 'What\'s Happening?';
 		this.state = {
 			tweet: '',
-			htmlTweet: '',
 			recentTypedMention: '' 
 		};
 		this.textareaRef = React.createRef();
 	}
 
-	renderTweet(tweet, stateChangedCallback = null) {
-		const { maxCharSize } = this.props;
-
-		let htmlTweet = tweet;
-		if (tweet.length > maxCharSize) { 
-			// coloring excess characters 
-			htmlTweet = tweet.substr(0, maxCharSize) + 'START_HIGHLIGHT_RED' + tweet.substr(maxCharSize)  + 'END_HIGHLIGHT_RED';
-		}
-		htmlTweet = htmlTweet.replace(/[\n\r]/g, 'NEWLINE'); // replace newline to <br>
-		htmlTweet = htmlTweet.replace(/(@[a-zA-Z0-9_.]+)/g, 'START_HIGHLIGHT_BLUE $1 END_HIGHLIGHT_BLUE' ); // coloring mention
-		htmlTweet = htmlTweet.replace(/(#[a-zA-Z0-9_]+)/g, 'START_HIGHLIGHT_BLUE $1 END_HIGHLIGHT_BLUE' ); // coloring hashtag
-
-		htmlTweet = escape(htmlTweet); // html escape
-		htmlTweet = htmlTweet.replace(/START_HIGHLIGHT_RED/g, 	'<span>');
-		htmlTweet = htmlTweet.replace(/END_HIGHLIGHT_RED/g, 	'</span>')
-		htmlTweet = htmlTweet.replace(/START_HIGHLIGHT_BLUE /g, '<i>');
-		htmlTweet = htmlTweet.replace(/ END_HIGHLIGHT_BLUE/g, 	'</i>');
-		htmlTweet = htmlTweet.replace(/NEWLINE/g, 				'<br>');
-
-		this.setState({ tweet, htmlTweet }, stateChangedCallback);		
-	}
-
 	handleChange(e) {
-		e.preventDefault()
 		const tweet = e.target.value;
-		this.renderTweet(tweet);
+		this.setState({ tweet });
+
 		this.props.onChange(tweet);
 	}
 
@@ -56,6 +32,7 @@ class Textarea extends React.Component {
 
 		const preMention = (textBeforeCursor.match(/@[a-zA-Z0-9_.]+$/) || '').toString();
 		const postMention = (textAfterCursor.match(/^[a-zA-Z0-9_.]+/) || '').toString();
+
 		if (preMention) {
 			this.setState({ recentTypedMention: preMention + postMention });
 		} else {
@@ -76,7 +53,7 @@ class Textarea extends React.Component {
 					  mention +
 					  textAfterCursor.replace(/^[a-zA-Z0-9_.]+/, ''); // remove right part mention if exists
 
-		this.renderTweet(tweet, () => {
+		this.setState({ tweet }, () => {
 			const newCursorPosition = (textBeforeCursor + mention).length;
 			textarea.setSelectionRange(newCursorPosition, newCursorPosition);
 			textarea.focus();
@@ -84,17 +61,22 @@ class Textarea extends React.Component {
 	}
 
 	render() {
-		const { tweet, htmlTweet, recentTypedMention } = this.state;
+		const { tweet, recentTypedMention } = this.state;
 		return (
 			<div styleName="container">
 				<textarea
 					ref={this.textareaRef}
 					value={tweet}
-					spellCheck={false}
 					onChange={this.handleChange}
-					onKeyUp={this.openMentionDropdown}>
+					onKeyUp={this.openMentionDropdown}
+					spellCheck={false}>
 				</textarea>
-				<div styleName="display" dangerouslySetInnerHTML={{__html: htmlTweet || this.placeholder}}></div>
+				<TweetRenderer
+					tweet={tweet}
+					placeholder={this.props.placeholder}
+					styleName="display">
+				</TweetRenderer>
+
 				{ recentTypedMention &&
 					<MentionDropdown mention={recentTypedMention} onSelected={this.handleSelectedMention} />
 				}
@@ -103,9 +85,9 @@ class Textarea extends React.Component {
 	}
 }
 
-Textarea.propTypes = {
-	maxCharSize: PropTypes.number.isRequired,
-	onChange: PropTypes.func.isRequired
+TweetEditor.propTypes = {
+	onChange: PropTypes.func,
+	placeholder: PropTypes.string
 }
 
-export default Textarea;
+export default TweetEditor;

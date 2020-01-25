@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './PhotoProfile.module.scss';
 
 const PhotoProfile = (props) => {
 	const className = props.className || "";
 	return (
 		<img className={'rounded-circle ' + className}
+			 styleName="photo-profile"
 			 width={props.size}
 			 height={props.size}
 			 alt=""

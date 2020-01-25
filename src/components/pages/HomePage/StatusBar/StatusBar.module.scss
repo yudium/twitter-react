@@ -3,7 +3,9 @@
 .container {
 	border-bottom: $border;
 	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 7px;
+	border-bottom: $border;
+	border-bottom-width: 9px;
 	button {
 		padding-left: 15px;
 		padding-right: 15px;
