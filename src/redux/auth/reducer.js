@@ -1,6 +1,6 @@
-import { USER_LOGGED_IN, USER_LOGGED_OUT } from "../types";
+import { USER_LOGGED_IN, USER_LOGGED_OUT } from "./type";
 
-function user(state = {}, action = {}) {
+function auth(state = {}, action = {}) {
     switch (action.type) {
         case USER_LOGGED_IN:
             return action.user;
@@ -10,4 +10,4 @@ function user(state = {}, action = {}) {
     }
 }
 
-export default user;
+export default auth;

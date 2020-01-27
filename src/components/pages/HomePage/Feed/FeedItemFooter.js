@@ -30,7 +30,7 @@ FeedItemFooter.propTypes = {
 	retweetCount: PropTypes.number.isRequired,
 	loveCount: PropTypes.number.isRequired,
 	isLoved: PropTypes.bool.isRequired,
-	isRetweeted: PropTypes.bool.isRequired
+	isRetweeted: PropTypes.bool.isRequired,
 }
 
 export default FeedItemFooter;

@@ -11,10 +11,19 @@ class TweetEditor extends React.Component {
 		this.openMentionDropdown = this.openMentionDropdown.bind(this);
 		this.handleSelectedMention = this.handleSelectedMention.bind(this);
 		this.state = {
-			tweet: '',
+			tweet:  '',
 			recentTypedMention: '' 
 		};
 		this.textareaRef = React.createRef();
+	}
+
+	componentDidUpdate(prevProps) {
+		// allow parent component to set tweet value by changing props.tweet value.
+		// this is useful when parent component want to clear current tweet by set
+		// props.tweet to empty string
+		if (this.props.tweet !== prevProps.tweet) {
+			this.setState({ tweet: this.props.tweet });
+		}
 	}
 
 	handleChange(e) {

@@ -8,12 +8,34 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './redux/rootReducer';
 import './index.css';
 import App from './App';
+import moment from 'moment';
+import 'moment/locale/id';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(thunk))
 );
+
+moment.locale('id');
+moment.updateLocale('id', {
+    relativeTime : {
+        future: "in %s",
+        past:   "%s lalu",
+        s  : 'baru saja',
+        ss : '%d detik',
+        m:  "1 menit",
+        mm: "%d menit",
+        h:  "1 jam",
+        hh: "%d jam",
+        d:  "1 hari",
+        dd: "%d hari",
+        M:  "1 bulan",
+        MM: "%d bulan",
+        y:  "1 tahun",
+        yy: "%d tahun"
+    }
+});
 
 ReactDOM.render(
     <BrowserRouter>

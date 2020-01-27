@@ -5,8 +5,9 @@ import './RoundedButton.module.scss';
 
 const RoundedButton = (props) => {
 	const className = props.className || "";
+	const onClick = props.onClick;
 	return (
-		<Button variant="primary" className={'rounded-pill ' + className} styleName="roundedButton">
+		<Button onClick={onClick} variant="primary" className={'rounded-pill ' + className} styleName="roundedButton">
 			{props.children}
 		</Button>
 	);
