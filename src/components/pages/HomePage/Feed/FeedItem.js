@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 import './FeedItem.module.scss';
 import PhotoProfile from '../../../shared/PhotoProfile';
@@ -8,7 +9,9 @@ import FeedItemHeader from './FeedItemHeader';
 import FeedItemFooter from './FeedItemFooter';
 
 const FeedItem = (props) => (
-	<a draggable="false" href="#" styleName="container-link">
+	<Link styleName="container-link"
+		  draggable="false"
+		  to={{pathname: '/tweet', state: { item: props.item } }}>
 		<Container styleName="container">
 			<Row>
 				<Col md={3} className="text-center"><PhotoProfile size={52} /></Col>
@@ -27,7 +30,7 @@ const FeedItem = (props) => (
 				</Col>
 			</Row>
 		</Container>
-	</a>
+	</Link>
 )
 
 FeedItem.propTypes = {

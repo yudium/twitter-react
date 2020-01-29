@@ -1,0 +1,7 @@
+@import '../../../Variables';
+
+.container {
+	border-left: $border;
+	border-right: $border;
+	min-height: 100vh;
+}

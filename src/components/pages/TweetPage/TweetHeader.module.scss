@@ -1,0 +1,28 @@
+@import '../../../Variables';
+
+.container {
+	margin: 0;
+	padding: 0;
+	.name {
+		a {
+			display: block;
+			color: inherit;
+			text-decoration: none;
+			.underline-hover {
+				text-decoration: none;
+			}
+			&:hover .underline-hover {
+				text-decoration: underline;
+			}
+			strong {
+				display: block;
+			}
+			span {
+				display: block;
+				text-decoration: none;
+				font-size: 14px;
+				color: $secondary-font-color;
+			}
+		}
+	}
+}

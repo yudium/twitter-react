@@ -1,0 +1,15 @@
+@import '../../../Variables';
+
+.time {
+	margin-top: 15px;
+	font-size: 15px;
+}
+
+.container {
+	margin: 15px 0;
+	padding: 15px 0;
+	border: $border;
+	border-left: none;
+	border-right: none;
+	font-size: 15px;
+}

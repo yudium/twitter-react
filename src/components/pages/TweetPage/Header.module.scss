@@ -1,0 +1,20 @@
+@import '../../../Variables';
+
+.container {
+	display: flex;
+	padding: 20px 20px 16px 20px;
+	border-bottom: $border;
+	h1 {
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 25px;
+		margin:0;
+	}
+	span { // font-awesome icon
+		font-size: 17px;
+		cursor: pointer;
+		&:hover {
+			color: $bootstrap-background;
+		}
+	}
+}
